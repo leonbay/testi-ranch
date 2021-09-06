@@ -1,23 +1,7 @@
-resource "google_storage_bucket" "datafusion-bucket-final-project" {
-  name          = var.name
+resource "google_storage_bucket" "bucket" {
+  name          = var.name[count.index]
   location      = var.location
   force_destroy = true
   project = var.project_id
-  count = 0
-}
-
-resource "google_storage_bucket" "backend-bucket-final-project" {
-  name          = var.name
-  location      = var.location
-  force_destroy = true
-  project = var.project_id
-  count = 1
-}
-
-resource "google_storage_bucket" "cloud-function-final-project" {
-  name          = var.name
-  location      = var.location
-  force_destroy = true
-  project = var.project_id
-  count = 2
+  count = 3
 }
