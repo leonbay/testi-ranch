@@ -1,8 +1,8 @@
 resource "google_bigquery_dataset" "dataset" {
-  dataset_id                  = "example_dataset" #kenties variablena tämä
+  dataset_id                  = "Covid & Currency" #kenties variablena tämä
   description                 = "Potential correlation between covid and currencies"
-  location                    = "EU" #kenties variablena tämä, ks. mikä päätettiin
-  delete_contents_on_destroy = true #selvitä mikä meininki
+  location                    = var.region
+  delete_contents_on_destroy = false #selvitä mikä meininki
   project = var.project_id
 
   access {
@@ -16,7 +16,7 @@ resource "google_bigquery_dataset" "dataset" {
 
 }
 
-resource "google_bigquery_table" "default" {
+resource "google_bigquery_table" "muuta_nimi" {
   dataset_id = google_bigquery_dataset.dataset.dataset_id
   table_id   = "joku_kuvaava_nimi"
 
