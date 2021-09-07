@@ -2,6 +2,7 @@ terraform {
   backend "gcs" {
     bucket  = var.backend_bucket
     prefix  = "terraform/state"
+    depends_on = [google_storage_bucket.bucket[1],]
   }
 
   required_providers {
