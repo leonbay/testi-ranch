@@ -1,6 +1,6 @@
 variable "name" {
   type        = list(string)
-  default     = ["AAAa-backend-bucket-final-project","AAAAAA-cloud-function-final-project"]
+  default     = ["backend-bucket-final-project","cloud-function-final-project"]
   description = "description"
 }
 
