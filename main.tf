@@ -31,19 +31,7 @@ module "functions" {
   region = var.region
 }
 
-module "data_fusion" {
-  source = ".//modules/data_fusion"
-  project_id = var.project_id
-  region = var.region
-}
-
-module "cloud_build" {
-  source = ".//modules/cloud_build"
-  project_id = var.project_id
-  region = var.region
-}
-
-module "cloud_scheduler" {
-    source = ".//modules/cloud_build"
-    project_id = var.project_id
-}
+# module "cloud_scheduler" {
+#     source = ".//modules/cloud_build"
+#     project_id = var.project_id
+# }
