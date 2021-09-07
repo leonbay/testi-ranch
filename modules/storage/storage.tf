@@ -3,5 +3,5 @@ resource "google_storage_bucket" "bucket" {
   location      = "US"
   force_destroy = true
   project = var.project
-  count = 3
+  count = 2
 }
