@@ -15,8 +15,6 @@ provider "google" {
 
 module "storage" {
   source     = ".//modules/storage"
-  project_id = var.project
-  region = var.region
 }
 
 # module "database" {
