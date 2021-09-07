@@ -7,7 +7,11 @@ resource "google_bigquery_dataset" "dataset" {
 
   access {
     role          = "OWNER" #selvitä mikä best practice
-    group_by_email = #tee ryhmä tietyillä oikeuksilla
+    group_by_email = #tee ryhmä ml-tiimille
+  }
+  access {
+    role = "VIEWER" #pipelinelle omat jutut ym., lisää access-lohkoja tarvittaessa
+    group_by_email = #tee ryhmä pipeline-tiimille
   }
 
 }
