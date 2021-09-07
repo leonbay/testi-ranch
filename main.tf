@@ -19,11 +19,11 @@ module "storage" {
   region = var.region
 }
 
-module "database" {
-  source = ".//modules/database"
-  project_id = var.project
-  region = var.region
-}
+# module "database" {
+#   source = ".//modules/database"
+#   project_id = var.project
+#   region = var.region
+# }
 
 # module "functions" {
 #   source = ".//modules/functions"
