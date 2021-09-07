@@ -1,4 +1,13 @@
 terraform {
+<<<<<<< HEAD
+=======
+  backend "gcs" {
+    bucket  = var.backend_bucket
+    prefix  = "terraform/state"
+    depends_on = [google_storage_bucket.bucket[1],]
+  }
+
+>>>>>>> e2a74dc5025606ef586e0a5b06da14a6a987b0af
   required_providers {
     google = {
       source = "hashicorp/google"
