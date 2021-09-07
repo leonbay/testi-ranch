@@ -1,5 +1,3 @@
-variable "project" {
-}
+variable "project" {}
 
-variable "region" {
-}
+variable "region" {}

@@ -16,7 +16,7 @@ resource "google_bigquery_dataset" "dataset" {
 
 }
 
-resource "google_bigquery_table" "default" {
+resource "google_bigquery_table" "muuta_nimi" {
   dataset_id = google_bigquery_dataset.dataset.dataset_id
   table_id   = "joku_kuvaava_nimi"
 
