@@ -25,11 +25,11 @@ module "database" {
   region = var.region
 }
 
-module "functions" {
-  source = ".//modules/functions"
-  project_id = var.project_id
-  region = var.region
-}
+# module "functions" {
+#   source = ".//modules/functions"
+#   project_id = var.project_id
+#   region = var.region
+# }
 
 # module "cloud_scheduler" {
 #     source = ".//modules/cloud_build"
