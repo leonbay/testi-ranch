@@ -3,16 +3,16 @@ resource "google_bigquery_dataset" "dataset" {
   description                 = "Potential correlation between covid and currencies"
   location                    = var.region
   delete_contents_on_destroy = false #selvitä mikä meininki
-  project = var.project_id
+  project = var.project
 
-  access {
+  /* access {
     role          = "OWNER" #selvitä mikä best practice
     group_by_email = #tee ryhmä ml-tiimille
   }
   access {
     role = "VIEWER" #pipelinelle omat jutut ym., lisää access-lohkoja tarvittaessa
     group_by_email = #tee ryhmä pipeline-tiimille
-  }
+  } */
 
 }
 
