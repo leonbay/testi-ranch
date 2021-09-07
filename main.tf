@@ -15,13 +15,13 @@ provider "google" {
 
 module "storage" {
   source     = ".//modules/storage"
-  project_id = var.project_id
+  project_id = var.project
   region = var.region
 }
 
 module "database" {
   source = ".//modules/database"
-  project_id = var.project_id
+  project_id = var.project
   region = var.region
 }
 
