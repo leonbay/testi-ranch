@@ -1,11 +1,3 @@
-variable "region" {
-  default = "us-central1"
-}
-
-variable "zone" {
-  default = "us-central1-a"
-}
-
 variable "runtime" {
   type = string
   default = "python37"
@@ -29,3 +21,7 @@ variable "function_name" {
 }
 
 variable "project" {}
+
+variable "region" {}
+
+variable "zone" {}
