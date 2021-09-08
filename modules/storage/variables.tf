@@ -4,12 +4,8 @@ variable "name" {
   description = "description"
 }
 
-variable "region" {
+variable "region" {}
 
-}
-
-variable "project" {
-
-}
+variable "project" {}
 
 
