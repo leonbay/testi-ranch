@@ -1,4 +1,4 @@
-resource "google_cloud_scheduler_job" "job" {
+/* resource "google_cloud_scheduler_job" "job" {
   name             = var.scheduler_name
   description      = var.scheduler_description
   schedule         = var.schedule
@@ -9,4 +9,4 @@ resource "google_cloud_scheduler_job" "job" {
     http_method = var.http_method
     uri         = module.functions.function_url #tämä ei välttämättä oikein
   }
-}
+} */

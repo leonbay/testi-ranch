@@ -13,6 +13,12 @@ provider "google" {
   zone = var.zone
 }
 
+provider "google-beta" {
+  project = var.project
+  region  = var.region
+  zone    = var.zone
+}
+
 module "storage" {
   source     = ".//modules/storage"
   project = var.project
