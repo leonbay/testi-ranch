@@ -25,6 +25,12 @@ module "storage" {
   region = var.region
 }
 
+# module "dialogflow" {
+#   source     = ".//modules/dialogflow_agent"
+#   project = var.project
+#   region = var.region
+# }
+
 # module "database" {
 #   source = ".//modules/database"
 #   project_id = var.project
