@@ -4,7 +4,7 @@ resource "google_cloudfunctions_function" "function" {
   name        = var.function_name[count.index]
   runtime     = var.runtime
   available_memory_mb   = 256
-  count = 4
+  count = 5
   trigger_http          = true
   entry_point           = var.entrypoint[count.index]
 
@@ -15,7 +15,7 @@ resource "google_cloudfunctions_function" "function" {
 
 # IAM entry for all users to invoke the function
 resource "google_cloudfunctions_function_iam_member" "invoker" {
-  count = 4
+  count = 5
   project        = google_cloudfunctions_function.function[count.index].project
   region         = google_cloudfunctions_function.function[count.index].region
   cloud_function = google_cloudfunctions_function.function[count.index].name
