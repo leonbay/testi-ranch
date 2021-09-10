@@ -7,6 +7,7 @@ resource "google_cloudfunctions_function" "function" {
   count = 5
   trigger_http          = true
   entry_point           = var.entrypoint[count.index]
+  service_account_email = "https://console.cloud.google.com/iam-admin/serviceaccounts/project?project=leo-test-env-1"
 
   source_repository {
     url = var.source_repository_url[count.index]
