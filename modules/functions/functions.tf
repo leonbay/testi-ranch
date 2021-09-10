@@ -1,6 +1,7 @@
 resource "google_cloudfunctions_function" "function" {
   project = var.project
   region = var.region
+  zone = var.region
   name        = var.function_name[count.index]
   description = var.description
   runtime     = var.runtime

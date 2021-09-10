@@ -33,19 +33,19 @@ module "storage" {
 
 module "database" {
   source = ".//modules/database"
-  project_id = var.project
+  project = var.project
   region = var.region
   depends_on = [module.functions,]
 }
 
 module "functions" {
   source = ".//modules/functions"
-  project_id = var.project_id
+  project = var.project
   region = var.region
   depends_on = [module.storage,]
 }
 
 # module "cloud_scheduler" {
 #     source = ".//modules/cloud_build"
-#     project_id = var.project_id
+#     project = var.project
 # }
