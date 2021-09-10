@@ -31,7 +31,7 @@ module "storage" {
 #   region = var.region
 # }
 
-module "database" {
+/*module "database" {
   source = ".//modules/database"
   project = var.project
   region = var.region
@@ -48,4 +48,4 @@ module "functions" {
 # module "cloud_scheduler" {
 #     source = ".//modules/cloud_build"
 #     project = var.project
-# }
+# }*/
