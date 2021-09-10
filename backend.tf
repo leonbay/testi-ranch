@@ -1,5 +1,5 @@
 terraform {
   backend "gcs" {
-    bucket = module.storage.bucket[0]
+    bucket = "backend-bucket-final-project"
   }
 }
