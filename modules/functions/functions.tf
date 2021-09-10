@@ -20,5 +20,5 @@ resource "google_cloudfunctions_function_iam_member" "invoker" {
   region         = google_cloudfunctions_function.function[count.index].region
   cloud_function = google_cloudfunctions_function.function[count.index].name
   role   = "roles/cloudfunctions.invoker"
-  member = "allUsers1"
+  member = "allUsers"
 }
