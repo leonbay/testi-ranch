@@ -8,8 +8,6 @@ variable "entrypoint" {
   default = ["upload_to_bq","currency_history", "currency_today", "delete_blob"]
 }
 
-#variable "description" {}
-
 variable "source_repository_url" {
   type = list(string)
   default = ["https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/bq-data-transfer",

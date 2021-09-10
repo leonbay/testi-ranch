@@ -3,7 +3,6 @@ resource "google_cloudfunctions_function" "function" {
   region = var.region
   zone = var.region
   name        = var.function_name[count.index]
-  description = var.description
   runtime     = var.runtime
   available_memory_mb   = 256
   count = 4
