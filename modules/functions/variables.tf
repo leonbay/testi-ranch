@@ -5,19 +5,19 @@ variable "runtime" {
 
 variable "entrypoint" {
   type = list(string)
-  default = ["",""]
+  default = ["upload_to_bq",""]
 }
 
-variable "description" {}
+#variable "description" {}
 
 variable "source_repository_url" {
   type = list(string)
-  default = ["",""]
+  default = [""]
 }
 
 variable "function_name" {
   type = list(string)
-  default = ["",""]
+  default = ["bq-data-transfer"]
 }
 
 variable "project" {}
