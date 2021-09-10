@@ -43,7 +43,6 @@ module "functions" {
   project = var.project
   region = var.region
   depends_on = [module.storage,]
-  zone = var.zone
 }
 
 # module "cloud_scheduler" {

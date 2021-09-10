@@ -24,5 +24,3 @@ variable "function_name" {
 variable "project" {}
 
 variable "region" {}
-
-variable "zone" {}

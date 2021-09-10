@@ -1,7 +1,6 @@
 resource "google_cloudfunctions_function" "function" {
   project = var.project
   region = var.region
-  zone = var.region
   name        = var.function_name[count.index]
   runtime     = var.runtime
   available_memory_mb   = 256
