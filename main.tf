@@ -31,17 +31,19 @@ module "storage" {
 #   region = var.region
 # }
 
-# module "database" {
-#   source = ".//modules/database"
-#   project_id = var.project
-#   region = var.region
-# }
+module "database" {
+  source = ".//modules/database"
+  project_id = var.project
+  region = var.region
+  depends_on = [module.functions,]
+}
 
-# module "functions" {
-#   source = ".//modules/functions"
-#   project_id = var.project_id
-#   region = var.region
-# }
+module "functions" {
+  source = ".//modules/functions"
+  project_id = var.project_id
+  region = var.region
+  depends_on = [module.storage,]
+}
 
 # module "cloud_scheduler" {
 #     source = ".//modules/cloud_build"

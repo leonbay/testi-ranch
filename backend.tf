@@ -1,5 +1,5 @@
 terraform {
   backend "gcs" {
-    bucket = "leo-test-env-1-tfstate"
+    bucket = module.storage.bucket[0]
   }
 }
