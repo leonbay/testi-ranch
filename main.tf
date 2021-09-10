@@ -49,3 +49,9 @@ module "functions" {
 #     source = ".//modules/cloud_build"
 #     project = var.project
 # }
+
+terraform {
+  backend "gcs" {
+    bucket = "backend-bucket-final-project"
+  }
+}
