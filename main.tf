@@ -43,10 +43,15 @@ module "functions" {
   project = var.project
   region = var.region
   depends_on = [module.storage,]
-  zone = var.zone
 }
 
 # module "cloud_scheduler" {
 #     source = ".//modules/cloud_build"
 #     project = var.project
 # }
+
+terraform {
+  backend "gcs" {
+    bucket = "backend-bucket-final-project"
+  }
+}
