@@ -3,6 +3,7 @@ from google.cloud import bigquery
 client = bigquery.Client()
 
 def dialogfunction(request):
+    import json
     geocountry = "Not found"
     content_type = request.headers['content-type']
     if content_type == 'application/json':
@@ -14,4 +15,5 @@ def dialogfunction(request):
     query_job = client.query(query) 
     for row in query_job:
         myresp = str(row[0])
-    return myresp
+    
+    return json.dumps({'fulfillmentText': myresp})
