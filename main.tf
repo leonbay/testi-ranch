@@ -58,7 +58,6 @@ module "workflow" {
 
 terraform {
   backend "gcs" {
-    credentials = "terraformaaja@leo-test-env-1.iam.gserviceaccount.com"
     bucket = "backend-bucket-final-project"
   }
 }
