@@ -62,5 +62,6 @@ def history(request):
 
   print("upload startes")
   blob.upload_from_filename("/tmp/historyTEST.csv")
+  #testi
 
   print("upload ok")
