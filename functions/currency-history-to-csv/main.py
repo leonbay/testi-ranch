@@ -12,7 +12,6 @@ import json
 #This is helper-function, that makes the first history.csv from the history.json
 
 def history(request):
-  
 
   client = storage.Client()
   bucket1 = client.get_bucket('currency-raw-data-json-test')
@@ -62,6 +61,5 @@ def history(request):
 
   print("upload startes")
   blob.upload_from_filename("/tmp/historyTEST.csv")
-  #testi
 
   print("upload ok")
