@@ -1,7 +1,7 @@
 resource "google_bigquery_dataset" "dataset" {
   dataset_id                  = "Covid_Currency"
   description                 = "Potential correlation between covid and currencies"
-  location                    = var.region
+  location                    = "US"
   project = var.project
 
   /* access {
