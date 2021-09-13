@@ -7,7 +7,7 @@ resource "google_cloudfunctions_function" "function" {
   count = 5
   trigger_http          = true
   entry_point           = var.entrypoint[count.index]
-  service_account_email = "419784467528-compute@developer.gserviceaccount.com"
+  service_account_email = var.service_account
 
   source_repository {
     url = var.source_repository_url[count.index]
