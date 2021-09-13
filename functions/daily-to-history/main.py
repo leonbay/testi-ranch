@@ -17,7 +17,6 @@ def currenttohistory(self):
   jsonFile = bucket1.get_blob('todayscurrencydata.json')
   historyFile = bucket2.get_blob('history.csv')
   
-
   # convert to blob to json (todays values):
   json_data_string = jsonFile.download_as_string()
   data = ndjson.loads(json_data_string)
