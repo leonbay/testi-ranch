@@ -20,7 +20,7 @@ variable "source_repository_url" {
 
 variable "function_name" {
   type = list(string)
-  default = ["bq-data-transfer", "currencyhistory", "delete-func", "todayscurrencies", "current-to-history", "currency-history-to-csv"]
+  default = ["bq-data-transfer", "currencyhistory", "delete-func", "todayscurrencies", "daily-to-history", "currency-history-to-csv"]
 }
 
 variable "project" {}
