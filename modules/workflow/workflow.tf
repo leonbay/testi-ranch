@@ -30,7 +30,6 @@ resource "google_workflows_workflow" "pipeline-workflow" {
             url: https://us-central1-leo-test-env-1.cloudfunctions.net/bq-data-transfer
           result: ok
         retry: $${http.default_retry}
-
     - deleteDailyData:
         try:
           call: http.get
