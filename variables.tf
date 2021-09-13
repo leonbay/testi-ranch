@@ -12,3 +12,7 @@ variable "project" {
   default     = "leo-test-env-1"
   description = "description"
 }
+
+variable "service_account" {
+  default = "terraformaaja@leo-test-env-1.iam.gserviceaccount.com"
+  }

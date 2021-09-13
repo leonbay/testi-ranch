@@ -1,4 +1,4 @@
-resource "google_dialogflow_agent" "full_agent" {
+/*resource "google_dialogflow_agent" "full_agent" {
   display_name = "dialogflow-agent" #required
   default_language_code = "en" #required
   supported_language_codes = ["fr","de","es"]
@@ -30,4 +30,4 @@ resource "google_dialogflow_entity_type" "basic_entity_type" {
     value = "value2"
     synonyms = ["synonym3","synonym4"]
   }
-}
+}*/

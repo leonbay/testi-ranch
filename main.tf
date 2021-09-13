@@ -13,6 +13,12 @@ provider "google" {
   zone = var.zone
 }
 
+provider "google-beta" {
+  project = var.project
+  region  = var.region
+  zone    = var.zone
+}
+
 module "storage" {
   source     = ".//modules/storage"
   project = var.project
@@ -25,19 +31,33 @@ module "storage" {
 #   region = var.region
 # }
 
-# module "database" {
-#   source = ".//modules/database"
-#   project_id = var.project
-#   region = var.region
-# }
+module "database" {
+  source = ".//modules/database"
+  project = var.project
+  region = var.region
+  depends_on = [module.functions,]
+}
 
-# module "functions" {
-#   source = ".//modules/functions"
-#   project_id = var.project_id
-#   region = var.region
-# }
+module "functions" {
+  source = ".//modules/functions"
+  project = var.project
+  region = var.region
+  depends_on = [module.storage,]
+}
+
+module "workflow" {
+  source = ".//modules/workflow"
+  region = var.region
+  depends_on = [module.functions,]
+}
 
 # module "cloud_scheduler" {
 #     source = ".//modules/cloud_build"
-#     project_id = var.project_id
+#     project = var.project
 # }
+
+terraform {
+  backend "gcs" {
+    bucket = "backend-bucket-final-project"
+  }
+}

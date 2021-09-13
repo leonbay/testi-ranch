@@ -1,15 +1,11 @@
 variable "name" {
   type        = list(string)
-  default     = ["backend-bucket-final-project","cloud-function-final-project"]
+  default     = ["cloud-function-final-project", "currency-raw-data-json-test", "currency_csv_bucket-test"]
   description = "description"
 }
 
-variable "region" {
+variable "region" {}
 
-}
-
-variable "project" {
-
-}
+variable "project" {}
 
 
