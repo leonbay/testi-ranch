@@ -5,7 +5,7 @@ variable "runtime" {
 
 variable "entrypoint" {
   type = list(string)
-  default = ["upload_to_bq","currency_history", "delete_blob", "currency_today", "currenttohistory"]
+  default = ["upload_to_bq","currency_history", "delete_blob", "currency_today", "currenttohistory", "history"]
 }
 
 variable "source_repository_url" {
@@ -14,12 +14,13 @@ variable "source_repository_url" {
              "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/currencyhistory",
              "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/delete-func",
              "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/todayscurrencies",
-             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/current-to-history"]
+             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/current-to-history"
+             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/currency-history-to-csv"]
 }
 
 variable "function_name" {
   type = list(string)
-  default = ["bq-data-transfer", "currencyhistory", "delete-func", "todayscurrencies", "current-to-history"]
+  default = ["bq-data-transfer", "currencyhistory", "delete-func", "todayscurrencies", "current-to-history", "currency-history-to-csv"]
 }
 
 variable "project" {}
