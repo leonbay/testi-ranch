@@ -6,9 +6,6 @@ import os
 import ndjson
 import json
 
-
-
-
 #This is helper-function, that makes the first history.csv from the history.json
 
 def history(request):
