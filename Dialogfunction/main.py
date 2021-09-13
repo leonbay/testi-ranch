@@ -7,12 +7,11 @@ def dialogfunction(request):
     content_type = request.headers['content-type']
     if content_type == 'application/json':
         request_json = request.get_json(silent=True)
-        if request_json and 'geo-country' in request_json:
-            geocountry = request_json['geo-country']
+        geocountry = request_json['queryResult']['parameters']['geo-country']
 
     myresp = "Not found"
-    query = f"SELECT per100k FROM `loppuprojekti-325208.ML_test_1.ML_global_forecast_results_with_per100k` WHERE location = 'Albania' ORDER BY per100k DESC LIMIT 1"
+    query = f"SELECT per100k FROM `loppuprojekti-325208.ML_test_1.ML_global_forecast_results_with_per100k` WHERE location = '{geocountry}' ORDER BY per100k DESC LIMIT 1"
     query_job = client.query(query) 
     for row in query_job:
         myresp = str(row[0])
-    return geocountry
+    return myresp
