@@ -45,6 +45,12 @@ module "functions" {
   depends_on = [module.storage,]
 }
 
+module "workflow" {
+  source = ".//modules/workflow"
+  region = var.region
+  depends_on = [module.functions,]
+}
+
 # module "cloud_scheduler" {
 #     source = ".//modules/cloud_build"
 #     project = var.project

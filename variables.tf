@@ -12,3 +12,7 @@ variable "project" {
   default     = "leo-test-env-1"
   description = "description"
 }
+
+variable "service_account" {
+  default = "419784467528-compute@developer.gserviceaccount.com"
+  }
