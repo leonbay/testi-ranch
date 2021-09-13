@@ -4,7 +4,7 @@ resource "google_workflows_workflow" "pipeline-workflow" {
   region          = var.region
   description     = "Magic"
   service_account = var.service_account
-  source_contents = <<-EOF
+  source_contents = 
   main:
     params: [input]
     steps:
@@ -41,5 +41,4 @@ resource "google_workflows_workflow" "pipeline-workflow" {
             url: https://us-central1-loppuprojekti-325208.cloudfunctions.net/delete-func
           result: ok
         retry: ${http.default_retry}
-EOF
 }
