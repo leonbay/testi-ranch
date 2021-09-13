@@ -3,7 +3,7 @@ resource "google_workflows_workflow" "pipeline-workflow" {
   name            = "pipeline-workflow"
   region          = var.region
   description     = "Magic"
-  service_account = google_service_account.terra.id
+  service_account = var.service_account
   source_contents = <<-EOF
   main:
     params: [input]
