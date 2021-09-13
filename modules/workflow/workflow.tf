@@ -8,7 +8,7 @@ resource "google_workflows_workflow" "pipeline-workflow" {
   main:
     params: [input]
     steps:
-    - getTodaysCurrencies: #eka funktio, hakee päivittäisen datan
+    - getTodaysCurrencies:
         try:
           call: http.get
           args:
@@ -16,14 +16,14 @@ resource "google_workflows_workflow" "pipeline-workflow" {
           result: ok
                 #condition: pyyttonin palauttamista vaihtoehdoista
         retry: $${http.default_retry}      
-    - dataAddedToHistory: #toka funktio, muokkaa päivittäisen csv:ksi ja yhdistää historiadatan kanssa
+    - dataAddedToHistory:
         try:
           call: http.get
           args:
             url: https://us-central1-leo-test-env-1.cloudfunctions.net/current-to-history
           result: ok
         retry: $${http.default_retry}
-    - transferToBQ: #transfers data from bucket to bigquery table
+    - transferToBQ:
         try:
           call: http.get
           args:
@@ -31,7 +31,7 @@ resource "google_workflows_workflow" "pipeline-workflow" {
           result: ok
         retry: $${http.default_retry}
 
-    - deleteDailyData: #kolmas funktio, poistaa päivittäisen json-tiedoston
+    - deleteDailyData:
         try:
           call: http.get
           args:
