@@ -28,5 +28,5 @@ variable "project" {}
 variable "region" {}
 
 variable "service_account" {
-  default = "419784467528-compute@developer.gserviceaccount.com"
+  default = "terraformaaja@leo-test-env-1.iam.gserviceaccount.com"
   }
