@@ -47,7 +47,6 @@ module "functions" {
 
 module "workflow" {
   source = ".//modules/workflow"
-  project = var.project
   region = var.region
   depends_on = [module.functions,]
 }
