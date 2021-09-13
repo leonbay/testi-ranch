@@ -4,7 +4,7 @@ resource "google_workflows_workflow" "pipeline-workflow" {
   region          = var.region
   description     = "Magic"
   service_account = var.service_account
-  source_contents = <<-EOF
+  source_contents = <<EOF
   main:
     params: [input]
     steps:
