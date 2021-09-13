@@ -54,7 +54,7 @@ def history(request):
 
   #upload 
   destination_blob_name = "history.csv"
-  bucket_name = 'currency_csv_bucket'
+  bucket_name = 'currency_csv_bucket-test'
 
   storage_client = storage.Client()
   bucket = storage_client.bucket(bucket_name)
