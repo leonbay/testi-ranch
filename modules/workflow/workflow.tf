@@ -15,8 +15,7 @@ resource "google_workflows_workflow" "pipeline-workflow" {
             url: https://us-central1-leo-test-env-1.cloudfunctions.net/todayscurrencies
           result: ok
                 #condition: pyyttonin palauttamista vaihtoehdoista
-        retry: $${http.default_retry}
-        #except: #pubsubiin täältä      
+        retry: $${http.default_retry}      
     - dataAddedToHistory: #toka funktio, muokkaa päivittäisen csv:ksi ja yhdistää historiadatan kanssa
         try:
           call: http.get
