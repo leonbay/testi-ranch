@@ -22,7 +22,6 @@ def history(request):
   
   #set_date = "2021-09-08" #select the currencies for further use that are in this date's data.
 
-
   #write header row
   with open("/tmp/historyTEST.csv", "w") as file:
       #1.row "date", usd, eur, etc"
