@@ -15,5 +15,5 @@ def dialogfunction(request):
     query_job = client.query(query) 
     for row in query_job:
         myresp = str(round(row[0],2))
-    finalresponse = f"The forecast for new cases in {geocountry} on {datetime} is {myresp}"
+    finalresponse = f"The forecast for new cases in {geocountry} on {datetime[:10]} is {myresp} per 100 000 people."
     return json.dumps({'fulfillmentText': finalresponse})
