@@ -15,7 +15,7 @@ def history(request):
   
 
   client = storage.Client()
-  bucket1 = client.get_bucket('currency-raw-data-json')
+  bucket1 = client.get_bucket('currency-raw-data-json-test')
   jsonFile = bucket1.get_blob('currency-history.json')
 
   json_data_string = jsonFile.download_as_string()
