@@ -8,7 +8,6 @@ resource "google_workflows_workflow" "pipeline-workflow" {
   main:
     params: [input]
     steps:
-
     - getTodaysCurrencies: #eka funktio, hakee päivittäisen datan
         try:
           call: http.get
@@ -17,8 +16,7 @@ resource "google_workflows_workflow" "pipeline-workflow" {
           result: ok
                 #condition: pyyttonin palauttamista vaihtoehdoista
         retry: $${http.default_retry}
-        #except: #pubsubiin täältä
-          
+        #except: #pubsubiin täältä      
     - dataAddedToHistory: #toka funktio, muokkaa päivittäisen csv:ksi ja yhdistää historiadatan kanssa
         try:
           call: http.get
