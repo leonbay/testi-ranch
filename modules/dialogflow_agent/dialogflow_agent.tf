@@ -1,23 +1,35 @@
-# resource "google_dialogflow_agent" "RoboBob" {
-#   display_name = "RoboBob" #required
-#   default_language_code = "en" #required
-#   time_zone = "Europe/Kaliningrad" #required
-#   avatar_uri = "https://www.clipartmax.com/png/small/140-1400962_vee-chatbot-meet-vee.png"
-#   enable_logging = true
-#   api_version = "API_VERSION_V2_BETA_1"
-# }
+resource "google_dialogflow_agent" "RoboBob" {
+  display_name = "RoboBob" #required
+  default_language_code = "en" #required
+  time_zone = "Europe/Kaliningrad" #required
+  avatar_uri = "https://www.clipartmax.com/png/small/140-1400962_vee-chatbot-meet-vee.png"
+  enable_logging = true
+  api_version = "API_VERSION_V2_BETA_1"
+}
 
-# resource "google_dialogflow_intent" "MLdataForRoboBob" {
-#   project = google_project.agent_project.project_id
-#   depends_on = [google_dialogflow_agent.basic_agent]
-#   display_name = "full-intent"
-#   webhook_state = "WEBHOOK_STATE_ENABLED"
-#   priority = 1
-#   is_fallback = false
-#   ml_disabled = true
-#   action = "some_action"
-#   reset_contexts = true
-#   input_context_names = ["projects/${google_project.agent_project.project_id}/agent/sessions/-/contexts/some_id"]
-#   events = ["some_event"]
-#   default_response_platforms = ["FACEBOOK","SLACK"]
-# }
+resource "google_dialogflow_intent" "MLdataForRoboBob" {
+  project = var.project_id
+  depends_on = [google_dialogflow_agent.RoboBob]
+  display_name = "MLdataForRoboBob"
+  webhook_state = "WEBHOOK_STATE_ENABLED"
+  priority = 1
+  training_phrases {
+     parts {
+         text = "Japan situation on 5.10.2021"
+     }
+     parts {
+         text = "I want to go Sweden next Friday"
+     }
+     repeat_count = 1
+  }
+
+  parameters {
+    id          = "param1"
+    entity_type = "projects/-/locations/-/agents/-/entityTypes/sys.date"
+  }
+
+  labels  = {
+      label1 = "value1",
+      label2 = "value2"
+   } 
+}
