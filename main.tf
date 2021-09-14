@@ -56,6 +56,12 @@ module "workflow" {
 #     project = var.project
 # }
 
+# module "secret_manager" {
+#   source = ".//modules/secret_manager"
+#   project = var.project
+#   password = var.dppassword
+# }
+
 terraform {
   backend "gcs" {
     bucket = "backend-bucket-final-project"
