@@ -30,5 +30,6 @@ variable "project" {}
 variable "region" {}
 
 variable "service_account" {
-  default = "terraformaaja@leo-test-env-1.iam.gserviceaccount.com"
+  default = "844731295003@cloudbuild.gserviceaccount.com"
+  #ei varmuutta onko oikein
   }

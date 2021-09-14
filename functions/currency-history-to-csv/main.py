@@ -11,7 +11,7 @@ import json
 def history(request):
 
   client = storage.Client()
-  bucket1 = client.get_bucket('currency-raw-data-json-test')
+  bucket1 = client.get_bucket('currency-raw-data-json')
   jsonFile = bucket1.get_blob('currency-history.json')
 
   json_data_string = jsonFile.download_as_string()
@@ -49,7 +49,7 @@ def history(request):
 
   #upload 
   destination_blob_name = "history.csv"
-  bucket_name = 'currency_csv_bucket-test'
+  bucket_name = 'currency_csv_bucket'
 
   storage_client = storage.Client()
   bucket = storage_client.bucket(bucket_name)
