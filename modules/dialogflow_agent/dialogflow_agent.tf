@@ -7,6 +7,15 @@ resource "google_dialogflow_agent" "RoboBob" {
   api_version = "API_VERSION_V2_BETA_1"
 }
 
+resource "google_dialogflow_fulfillment" "basic_fulfillment" {
+  depends_on = [google_dialogflow_agent.RoboBob]
+  display_name = "basic-fulfillment"
+  enabled    = true
+  generic_web_service {
+            uri      = "https://us-central1-loppuprojekti-325208.cloudfunctions.net/dialogfunction"
+    }
+}
+
 resource "google_dialogflow_intent" "MLdataForRoboBob" {
   project = var.project_id
   depends_on = [google_dialogflow_agent.RoboBob]
@@ -24,12 +33,12 @@ resource "google_dialogflow_intent" "MLdataForRoboBob" {
   }
 
   parameters {
-    id          = "param1"
-    entity_type = "projects/-/locations/-/agents/-/entityTypes/sys.date"
+    id          = "geo-country"
+    entity_type = "projects/loppuprojekti-325208/locations/RoboBob/agents/MLdataForRoboBob/entityTypes/sys.geo-country"
   }
 
-  labels  = {
-      label1 = "value1",
-      label2 = "value2"
-   } 
+  parameters{
+    id = "date-time"
+    entity_type = "projects/loppuprojekti-325208/locations/RoboBob/agents/MLdataForRoboBob/entityTypes/sys.date-time"
+  }
 }
