@@ -42,7 +42,7 @@ module "functions" {
   source = ".//modules/functions"
   project = var.project
   region = var.region
-  depends_on = [module.storage, module.secret_manager,]
+  depends_on = [module.storage,]
 }
 
 module "workflow" {
@@ -56,11 +56,11 @@ module "workflow" {
 #     project = var.project
 # }
 
-module "secret_manager" {
-  source = ".//modules/secret_manager"
-  project = var.project
-  password = var.dppassword
-}
+# module "secret_manager" {
+#   source = ".//modules/secret_manager"
+#   project = var.project
+#   password = var.dppassword
+# }
 
 terraform {
   backend "gcs" {
