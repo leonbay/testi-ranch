@@ -16,7 +16,7 @@ resource "google_cloudfunctions_function" "function" {
 
 # IAM entry for all users to invoke the function
 resource "google_cloudfunctions_function_iam_member" "invoker" {
-  count = 6
+  count = 8
   project        = google_cloudfunctions_function.function[count.index].project
   region         = google_cloudfunctions_function.function[count.index].region
   cloud_function = google_cloudfunctions_function.function[count.index].name

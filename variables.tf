@@ -11,8 +11,3 @@ variable "project" {
   type        = string
   default     = "loppuprojekti-325208"
 }
-
-variable "service_account" {
-  default = "loppuprojekti-325208@appspot.gserviceaccount.com"
-  #ei varmuutta toimiiko kaikissa jutuissa
-  }
