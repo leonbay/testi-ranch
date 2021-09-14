@@ -1,0 +1,4 @@
+google-cloud-secretmanager
+json
+requests
+os
