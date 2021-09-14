@@ -1,4 +1,2 @@
 google-cloud-secret-manager
-json
 requests
-os
