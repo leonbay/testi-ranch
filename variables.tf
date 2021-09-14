@@ -16,5 +16,3 @@ variable "project" {
 variable "service_account" {
   default = "terraformaaja@leo-test-env-1.iam.gserviceaccount.com"
   }
-
-variable "dppassword" {}
