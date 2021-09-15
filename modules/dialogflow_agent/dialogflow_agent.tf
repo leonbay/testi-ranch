@@ -14,6 +14,7 @@ resource "google_dialogflow_fulfillment" "basic_fulfillment" {
   generic_web_service {
             uri      = "https://us-central1-loppuprojekti-325208.cloudfunctions.net/dialogfunction"
     }
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -62,4 +63,6 @@ resource "google_dialogflow_intent" "MLdataForRoboBob" {
     id = "date-time"
     entity_type = "projects/loppuprojekti-325208/locations/RoboBob/agents/MLdataForRoboBob/entityTypes/sys.date-time"
   }
+=======
+>>>>>>> 4a4ed6fd0563f000af7bfcf027442f618d4f3a38
 }
