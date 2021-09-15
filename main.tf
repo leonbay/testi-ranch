@@ -42,7 +42,7 @@ module "functions" {
   source = ".//modules/functions"
   project = var.project
   region = var.region
-  depends_on = [module.storage,]
+  depends_on = [module.storage, module.database,]
 }
 
 module "workflow" {
