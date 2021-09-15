@@ -35,7 +35,6 @@ module "database" {
   source = ".//modules/database"
   project = var.project
   region = var.region
-  depends_on = [module.functions,]
 }
 
 module "functions" {
