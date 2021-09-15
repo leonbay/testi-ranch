@@ -73,7 +73,7 @@ resource "google_cloudfunctions_function_iam_member" "invoker2" {
 resource "google_cloudfunctions_function_iam_member" "invoker3" {
   project        = var.project
   region         = var.region
-  cloud_function = google_cloudfunctions_function.function3
+  cloud_function = google_cloudfunctions_function.function3.name
   role   = "roles/cloudfunctions.invoker"
   member = "allUsers"
 }
