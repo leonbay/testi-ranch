@@ -9,10 +9,5 @@ variable "zone" {
 
 variable "project" {
   type        = string
-  default     = "leo-test-env-1"
-  description = "description"
+  default     = "loppuprojekti-325208"
 }
-
-variable "service_account" {
-  default = "terraformaaja@leo-test-env-1.iam.gserviceaccount.com"
-  }

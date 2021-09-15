@@ -16,7 +16,7 @@ def currency_history(request):
     data = response.json()
 
     #storagebucket:
-    bucket_name = "currency-raw-data-json-test"
+    bucket_name = "currency-raw-data-json"
     # The ID of your GCS object
     destination_blob_name = "currency-history.json"
     #tallennetaan data storagebukettiin
