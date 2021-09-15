@@ -46,6 +46,6 @@ variable "project" {}
 variable "region" {}
 
 variable "service_account" {
-  default = "loppuprojekti-325208@appspot.gserviceaccount.com"
+  default = "419784467528-compute@developer.gserviceaccount.com"
   #ei varmuutta onko oikein
   }
