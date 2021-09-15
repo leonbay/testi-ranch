@@ -23,7 +23,7 @@ resource "google_cloudfunctions_function" "function2" {
   count = 2
   event_trigger {
     event_type = "google.storage.object.finalize"
-    resource = "covid-raw-data"
+    resource = "covid-raw-data-test"
   }
   entry_point           = var.entrypoint2[count.index]
   service_account_email = var.service_account
@@ -41,7 +41,8 @@ resource "google_cloudfunctions_function" "function3" {
   available_memory_mb   = 256
   event_trigger {
     event_type = "google.storage.object.finalize"
-    resource = "currency-raw-data-json"
+    resource = "currency-raw-data-json-test"
+    #vaihda test pois sitten vikaan versioon
   }
   entry_point           = "history"
   service_account_email = var.service_account

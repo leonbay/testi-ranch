@@ -12,7 +12,7 @@ def upload_to_bq(request):
         skip_leading_rows=1
     )
     job_config.write_disposition = 'WRITE_TRUNCATE'
-    uri = "gs://currency_csv_bucket/history.csv"
+    uri = "gs://currency_csv_bucket-test/history.csv"
 
     load_job = client.load_table_from_uri(
         uri, table_id, job_config=job_config
