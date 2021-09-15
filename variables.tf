@@ -9,5 +9,5 @@ variable "zone" {
 
 variable "project" {
   type        = string
-  default     = "loppuprojekti-325208"
+  default     = "leo-test-env-1"
 }
