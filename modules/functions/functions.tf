@@ -71,8 +71,8 @@ resource "google_cloudfunctions_function_iam_member" "invoker2" {
 }
 
 resource "google_cloudfunctions_function_iam_member" "invoker3" {
-  project        = google_cloudfunctions_function.function[count.index].project
-  region         = google_cloudfunctions_function.function[count.index].region
+  project        = var.project
+  region         = var.region
   cloud_function = "currency-history-to-csv"
   role   = "roles/cloudfunctions.invoker"
   member = "allUsers"
