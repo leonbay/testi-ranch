@@ -40,8 +40,8 @@ resource "google_cloudfunctions_function_iam_member" "invoker" {
 }
 
 resource "google_cloudfunctions_function_iam_member" "invoker2" {
-  project        = google_cloudfunctions_function.function.project
-  region         = google_cloudfunctions_function.function.region
+  project        = "leo-test-env-1"
+  region         = "us-central1"
   cloud_function = "dialogfunction"
   role   = "roles/cloudfunctions.invoker"
   member = "allUsers"
