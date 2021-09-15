@@ -15,7 +15,7 @@ resource "google_bigquery_dataset" "dataset" {
 
 }
 
-resource "google_bigquery_dataset" "dataset" {
+resource "google_bigquery_dataset" "error_dataset" {
   dataset_id                  = "errorhistory"
   description                 = "Logs sink"
   location                    = "US"
