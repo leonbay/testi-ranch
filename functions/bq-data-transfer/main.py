@@ -5,7 +5,7 @@ def upload_to_bq(request):
 
     client = bigquery.Client()
 
-    table_id = "loppuprojekti-325208.Covid_Currency.Currency-data"
+    table_id = "leo-test-env-1.Covid_Currency.Currency-data"
 
     job_config = bigquery.LoadJobConfig(
         
