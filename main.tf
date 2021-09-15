@@ -53,7 +53,6 @@ module "workflow" {
 
 module "pubsub" {
   source = ".//modules/pubsub"
-  region = var.region
 }
 
 # module "cloud_scheduler" {
