@@ -13,12 +13,12 @@ def dialogfunction(request):
             geocountry = request_json['queryResult']['parameters']['geo-country']
             datetime = request_json['queryResult']['parameters']['date-time']
 
-        query = f"SELECT per100k FROM `loppuprojekti-325208.ML_test_1.ML_global_forecast_results_with_per100k` WHERE location = '{geocountry}' AND forecast_timestamp = TIMESTAMP_TRUNC('{datetime}', DAY) LIMIT 1"
+        query = f"SELECT per100k FROM `	leo-test-env-1.ML_test_1.ML_global_forecast_results_with_per100k` WHERE location = '{geocountry}' AND forecast_timestamp = TIMESTAMP_TRUNC('{datetime}', DAY) LIMIT 1"
         query_job = client.query(query) 
         for row in query_job:
             myresp = str(round(row[0],2))
 
-        query2 = f"SELECT travel_index FROM `loppuprojekti-325208.ML_test_1.forecast_and_index_table_for_prod` WHERE location = '{geocountry}' AND date = TIMESTAMP_TRUNC('{datetime}', DAY) LIMIT 1"
+        query2 = f"SELECT travel_index FROM `leo-test-env-1.ML_test_1.forecast_and_index_table_for_prod` WHERE location = '{geocountry}' AND date = TIMESTAMP_TRUNC('{datetime}', DAY) LIMIT 1"
         query_job2 = client.query(query2)
 
         for row in query_job2:
