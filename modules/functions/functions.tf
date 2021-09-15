@@ -4,7 +4,7 @@ resource "google_cloudfunctions_function" "function" {
   name        = var.function_name[count.index]
   runtime     = var.runtime
   available_memory_mb   = 256
-  count = 5
+  count = 7
   trigger_http          = true
   entry_point           = var.entrypoint[count.index]
   service_account_email = var.service_account

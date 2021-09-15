@@ -5,7 +5,7 @@ variable "runtime" {
 
 variable "entrypoint" {
   type = list(string)
-  default = ["upload_to_bq","currency_history", "delete_blob", "currency_today", "currenttohistory"]
+  default = ["upload_to_bq","currency_history", "delete_blob", "currency_today", "currenttohistory", "upload_blob_history", "upload_blob_latest"]
 }
 
 variable "entry_point2" {
@@ -30,7 +30,7 @@ variable "source_repository_url2" {
 
 variable "function_name" {
   type = list(string)
-  default = ["bq-data-transfer", "currencyhistory", "delete-func", "todayscurrencies", "daily-to-history"]
+  default = ["bq-data-transfer", "currencyhistory", "delete-func", "todayscurrencies", "daily-to-history", "get-covid-history", "get-covid-latest"]
 }
 
 variable "function_name2" {

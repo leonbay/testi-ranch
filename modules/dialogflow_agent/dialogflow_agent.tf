@@ -1,23 +1,3 @@
-/*resource "google_dialogflow_agent" "full_agent" {
-  display_name = "dialogflow-agent" #required
-  default_language_code = "en" #required
-  supported_language_codes = ["fr","de","es"]
-  time_zone = "America/New_York" #required
-  description = "Example description."
-  avatar_uri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"
-  enable_logging = true
-  match_mode = "MATCH_MODE_ML_ONLY"
-  classification_threshold = 0.3
-  api_version = "API_VERSION_V2_BETA_1"
-  tier = "TIER_STANDARD"
-}
-
-resource "google_dialogflow_agent" "basic_agent" {
-  display_name = "example_agent"#required
-  default_language_code = "en"
-  time_zone = "America/New_York"
-}
-
 resource "google_dialogflow_agent" "RoboBob" {
   display_name = "RoboBob" #required
   default_language_code = "en" #required
@@ -36,6 +16,27 @@ resource "google_dialogflow_fulfillment" "basic_fulfillment" {
     }
 }
 
+<<<<<<< HEAD
+resource "google_dialogflow_agent" "RoboBob" {
+  display_name = "RoboBob" #required
+  default_language_code = "en" #required
+  time_zone = "Europe/Kaliningrad" #required
+  avatar_uri = "https://www.clipartmax.com/png/small/140-1400962_vee-chatbot-meet-vee.png"
+  enable_logging = true
+  api_version = "API_VERSION_V2_BETA_1"
+}
+
+resource "google_dialogflow_fulfillment" "basic_fulfillment" {
+  depends_on = [google_dialogflow_agent.RoboBob]
+  display_name = "basic-fulfillment"
+  enabled    = true
+  generic_web_service {
+            uri      = "https://us-central1-loppuprojekti-325208.cloudfunctions.net/dialogfunction"
+    }
+}
+
+=======
+>>>>>>> ca5594f6e8b3892abf78aec464878372f27e9b89
 resource "google_dialogflow_intent" "MLdataForRoboBob" {
   project = var.project_id
   depends_on = [google_dialogflow_agent.RoboBob]
