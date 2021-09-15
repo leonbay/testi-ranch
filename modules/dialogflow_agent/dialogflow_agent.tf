@@ -12,6 +12,6 @@ resource "google_dialogflow_fulfillment" "basic_fulfillment" {
   display_name = "basic-fulfillment"
   enabled    = true
   generic_web_service {
-            uri      = "https://us-central1-loppuprojekti-325208.cloudfunctions.net/dialogfunction"
+            uri      = "https://us-central1-leo-test-env-1.cloudfunctions.net/dialogfunction"
     }
 }

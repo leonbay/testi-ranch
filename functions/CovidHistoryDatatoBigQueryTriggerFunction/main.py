@@ -12,7 +12,7 @@ def dataprep_job_gcs_trigger(event, context):
     newfilepath = event['bucket']
 
     client = secretmanager.SecretManagerServiceClient()
-    ip2 = client.access_secret_version(request={"name": "projects/419784467528/secrets/dataprep-password/versions/latest"})
+    ip2 = client.access_secret_version(request={"name": "projects/419784467528/secrets/datapreptoken/versions/latest"})
     ip = ip2.payload.data.decode("UTF-8")
 
     #prints for dev:

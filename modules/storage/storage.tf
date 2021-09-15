@@ -3,5 +3,5 @@ resource "google_storage_bucket" "bucket" {
   storage_class = "MULTI_REGIONAL"
   force_destroy = true
   project = var.project
-  count = 6
+  count = 5
 }

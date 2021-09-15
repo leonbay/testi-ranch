@@ -1,8 +1,8 @@
 variable "name" {
   type        = list(string)
-  default     = ["cloud-function-final-project", "currency-archive-test" "currency-raw-data-json-test", "currency_csv_bucket-test", "covid-archive-test", "covid-raw-data-test"]
-  description = "description"
+  default     = ["cloud-function-final-project-test", "currency-raw-data-json-test", "currency_csv_bucket-test", "covid-archive-test", "covid-raw-data-test"]
 }
+#vaihda nimet vikaan versioon
 
 variable "region" {}
 

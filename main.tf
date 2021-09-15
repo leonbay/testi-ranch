@@ -35,14 +35,13 @@ module "database" {
   source = ".//modules/database"
   project = var.project
   region = var.region
-  depends_on = [module.functions,]
 }
 
 module "functions" {
   source = ".//modules/functions"
   project = var.project
   region = var.region
-  depends_on = [module.storage,]
+  depends_on = [module.storage, module.database,]
 }
 
 module "workflow" {
