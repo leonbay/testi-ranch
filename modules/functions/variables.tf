@@ -1,6 +1,6 @@
 variable "runtime" {
   type = string
-  default = "python37"
+  default = "python39"
 }
 
 variable "entrypoint" {
