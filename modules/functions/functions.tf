@@ -4,7 +4,7 @@ resource "google_cloudfunctions_function" "function" {
   name        = var.function_name[count.index]
   runtime     = var.runtime
   available_memory_mb   = 256
-  count = 6
+  count = 5
   trigger_http          = true
   entry_point           = var.entrypoint[count.index]
   service_account_email = var.service_account
@@ -30,6 +30,24 @@ resource "google_cloudfunctions_function" "function2" {
 
   source_repository {
     url = var.source_repository_url2[count.index]
+  }
+}
+
+resource "google_cloudfunctions_function" "function3" {
+  project = var.project
+  region = var.region
+  name        = "currency-history-to-csv"
+  runtime     = var.runtime
+  available_memory_mb   = 256
+  event_trigger {
+    event_type = "google.storage.object.finalize"
+    resource = "currency-raw-data-json"
+  }
+  entry_point           = "history"
+  service_account_email = var.service_account
+
+  source_repository {
+    url = "https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_dualic_awa-gcp-final-project/moveable-aliases/master/paths/functions/currency-history-to-csv"
   }
 }
 
