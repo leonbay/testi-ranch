@@ -30,7 +30,8 @@ dialogflow.googleapis.com \
 ml.googleapis.com \
 run.googleapis.com \
 servicenetworking.googleapis.com \
-sqladmin.googleapis.com
+sqladmin.googleapis.com \
+dialogflow.googleapis.com
 
 #create backend bucket for terraform state
 gsutil mb gs://backend-bucket-final-project
