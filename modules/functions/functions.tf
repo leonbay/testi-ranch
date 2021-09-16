@@ -4,11 +4,10 @@ resource "google_cloudfunctions_function" "function" {
   name        = var.function_name[count.index]
   runtime     = var.runtime
   available_memory_mb   = 256
-  count = 8
+  count = 7
   trigger_http          = true
   entry_point           = var.entrypoint[count.index]
   service_account_email = var.service_account
-  ingress_settings = "ALLOW_ALL"
 
   source_repository {
     url = var.source_repository_url[count.index]
@@ -55,7 +54,7 @@ resource "google_cloudfunctions_function" "function3" {
 
 # IAM entry for all users to invoke the function
 resource "google_cloudfunctions_function_iam_member" "invoker" {
-  count = 8
+  count = 7
   project        = var.project
   region         = var.region
   cloud_function = google_cloudfunctions_function.function[count.index].name
