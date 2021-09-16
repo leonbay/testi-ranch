@@ -20,7 +20,7 @@ resource "google_workflows_workflow" "pipeline-workflow" {
         try:
           call: http.get
           args:
-            url: https://us-central1-leo-test-env-1.cloudfunctions.net/current-to-history
+            url: https://us-central1-leo-test-env-1.cloudfunctions.net/daily-to-history
           result: ok
         retry: $${http.default_retry}
     - transferToBQ:
