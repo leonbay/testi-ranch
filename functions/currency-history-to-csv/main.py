@@ -66,4 +66,3 @@ def history(event, context):
         blob.upload_from_filename("/tmp/historyTEST.csv")
 
         print("upload ok")
-
