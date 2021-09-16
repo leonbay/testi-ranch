@@ -17,7 +17,7 @@ def currency_history(request):
 
     #storagebucket:
     # The ID of your GCS bucket (test names are being used, bucket name to be updated)
-    bucket_name1 = "currency-raw-data-json"
+    bucket_name1 = "currency-raw-data-json-test"
     bucket_name2 = "currency-archive-test"
     # The ID of your GCS object
     destination_blob_name1 = "currency-history.json"
