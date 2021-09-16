@@ -1,11 +1,11 @@
 variable "runtime" {
   type = string
-  default = "python39"
+  default = "python37"
 }
 
 variable "entrypoint" {
   type = list(string)
-  default = ["upload_to_bq","currency_history", "delete_blob", "currency_today", "currenttohistory", "dialogfunction", "upload_blob_history", "upload_blob_latest"]
+  default = ["upload_to_bq","currency_history", "delete_blob", "currency_today", "currenttohistory", "upload_blob_history", "upload_blob_latest"]
 }
 
 variable "entrypoint2" {
@@ -20,7 +20,6 @@ variable "source_repository_url" {
              "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/delete-func",
              "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/todayscurrencies",
              "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/daily-to-history",
-             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/dialogfunction",
              "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/get-covid-history",
              "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/get-covid-latest"]
 }
@@ -33,7 +32,7 @@ variable "source_repository_url2" {
 
 variable "function_name" {
   type = list(string)
-  default = ["bq-data-transfer", "currencyhistory", "delete-func", "todayscurrencies", "daily-to-history", "dialogfunction", "get-covid-history", "get-covid-latest"]
+  default = ["bq-data-transfer", "currencyhistory", "delete-func", "todayscurrencies", "daily-to-history", "get-covid-history", "get-covid-latest"]
 }
 
 variable "function_name2" {
