@@ -8,6 +8,7 @@ resource "google_cloudfunctions_function" "function" {
   trigger_http          = true
   entry_point           = var.entrypoint[count.index]
   service_account_email = var.service_account
+  ingress_settings = ALLOW_ALL
 
   source_repository {
     url = var.source_repository_url[count.index]
