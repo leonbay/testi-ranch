@@ -15,19 +15,19 @@ variable "entrypoint2" {
 
 variable "source_repository_url" {
   type = list(string)
-  default = ["https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/bq-data-transfer",
-             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/currencyhistory",
-             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/delete-func",
-             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/todayscurrencies",
-             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/daily-to-history",
-             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/get-covid-history",
-             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/get-covid-latest"]
+  default = ["https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/bq-data-transfer",
+             "https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/currencyhistory",
+             "https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/delete-func",
+             "https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/todayscurrencies",
+             "https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/daily-to-history",
+             "https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/get-covid-history",
+             "https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/get-covid-latest"]
 }
 
 variable "source_repository_url2" {
   type = list(string)
-  default = ["https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/CovidHistoryDatatoBigQueryTriggerFunction",
-             "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/LatestCovidDatatoBigQueryTriggerFunction"]
+  default = ["https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/CovidHistoryDatatoBigQueryTriggerFunction",
+             "https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/LatestCovidDatatoBigQueryTriggerFunction"]
 }
 
 variable "function_name" {
@@ -45,6 +45,5 @@ variable "project" {}
 variable "region" {}
 
 variable "service_account" {
-  default = "419784467528-compute@developer.gserviceaccount.com"
-  #ei varmuutta onko oikein
+  default = "844731295003@cloudbuild.gserviceaccount.com"
   }

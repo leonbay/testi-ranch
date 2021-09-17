@@ -19,8 +19,8 @@ def currency_today(request):
 
         #storagebucket:
         # The ID of your GCS bucket (test names are being used, bucket name to be updated)
-        bucket_name1 = "currency-raw-data-json-test"
-        bucket_name2 = "currency-archive-test"
+        bucket_name1 = "currency-raw-data-json"
+        bucket_name2 = "currency-archive"
         # The ID of your GCS object
         destination_blob_name1 = "todayscurrencydata.json"
         destination_blob_name2 = "todayscurrencydata{}.json".format(date_now)

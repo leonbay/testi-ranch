@@ -6,8 +6,8 @@ def upload_blob_history(request):
     today = date.today()
 
     # The ID of your GCS bucket (test names are being used, bucket name to be updated)
-    bucket_name1 = "covid-raw-data-test"
-    bucket_name2 = "covid-archive-test"
+    bucket_name1 = "covid-raw-data"
+    bucket_name2 = "covid-archive"
 
     # The path to your file to upload    
     req = Request("https://covid.ourworldindata.org/data/owid-covid-data.csv")

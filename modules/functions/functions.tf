@@ -41,14 +41,14 @@ resource "google_cloudfunctions_function" "function3" {
   available_memory_mb   = 256
   event_trigger {
     event_type = "google.storage.object.finalize"
-    resource = "currency-raw-data-json-test"
+    resource = "currency-raw-data-json"
     #vaihda test pois sitten vikaan versioon
   }
   entry_point           = "history"
   service_account_email = var.service_account
 
   source_repository {
-    url = "https://source.developers.google.com/projects/leo-test-env-1/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/currency-history-to-csv"
+    url = "https://source.developers.google.com/projects/loppuprojekti-325208/repos/github_leonbay_testi-ranch/moveable-aliases/master/paths/functions/currency-history-to-csv"
   }
 }
 

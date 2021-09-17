@@ -1,6 +1,5 @@
 variable "service_account" {
-  default = "419784467528-compute@developer.gserviceaccount.com"
-  #muuta tämä
+  default = "workflow-scheduler-sa@loppuprojekti-325208.iam.gserviceaccount.com"
   }
 
   variable "region" {}

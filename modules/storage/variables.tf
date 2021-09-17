@@ -1,8 +1,7 @@
 variable "name" {
   type        = list(string)
-  default     = ["currency-archive-test", "currency-raw-data-json-test", "currency_csv_bucket-test", "covid-archive-test", "covid-raw-data-test"]
+  default     = ["currency-archive", "currency-raw-data-json", "currency_csv_bucket", "covid-archive", "covid-raw-data"]
 }
-#vaihda nimet vikaan versioon
 
 variable "region" {}
 

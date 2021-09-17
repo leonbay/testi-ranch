@@ -3,7 +3,7 @@ from google.cloud import logging
 
 def delete_blob(request):
     try:
-        bucket_name = "currency-raw-data-json-test"
+        bucket_name = "currency-raw-data-json"
         blob_name = "todayscurrencydata.json"
 
         storage_client = storage.Client()

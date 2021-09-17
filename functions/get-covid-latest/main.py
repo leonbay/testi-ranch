@@ -6,8 +6,8 @@ def upload_blob_latest(request):
     today = date.today()
 
     # The ID of your GCS bucket 
-    bucket_name1 = "covid-raw-data-test"
-    bucket_name2 = "covid-archive-test"
+    bucket_name1 = "covid-raw-data"
+    bucket_name2 = "covid-archive"
 
     # The path to your file to upload    
     req = Request("https://covid.ourworldindata.org/data/latest/owid-covid-latest.csv")

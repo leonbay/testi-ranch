@@ -15,7 +15,7 @@ def dataprep_job_gcs_trigger(event, context):
     client = secretmanager.SecretManagerServiceClient()
 
     # Build the resource name of the secret version.
-    name = f"projects/leo-test-env-1/secrets/datapreptoken/versions/1"
+    name = f"projects/loppuprojekti-325208/secrets/datapreptoken/versions/1"
 
     # Access the secret version.
     response = client.access_secret_version(request={"name": name})
